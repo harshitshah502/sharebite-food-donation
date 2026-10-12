@@ -1,40 +1,25 @@
-# ShareBite — Food Donation and Surplus Redistribution System
+# ShareBite 2.0 — Full-stack local prototype
 
-ShareBite is a front-end prototype for a community-based food donation system. It demonstrates how food donors can list surplus food and how NGOs/receivers can request donations and publish food requirements.
+## Easiest Windows setup
+1. Install Node.js LTS from https://nodejs.org/.
+2. Extract this ZIP to a normal folder.
+3. Double-click `start.bat` and wait for npm to install packages.
+4. Open http://localhost:3000. Keep the terminal open while using the app.
+
+Demo accounts (password for all: `demo123`):
+- admin@sharebite.demo
+- donor@sharebite.demo
+- ngo@sharebite.demo
+- receiver@sharebite.demo
 
 ## Features
-
-- Role-based demo dashboards for Administrator, Food Donor, NGO, and Food Receiver
-- Static login and registration page previews
-- Food listing and donation request workflows
-- Donor review of incoming requests
+- Server-backed registration/login, bcrypt password hashes, role checks
+- SQLite persistence in `data/sharebite.sqlite`
+- Food donation listings, image uploads (JPG/PNG/WebP, 5 MB max)
+- Optional GPS capture and OpenStreetMap link
+- Shared donation requests, accept/reject/complete workflow
 - NGO/receiver food needs visible to donors
-- Sample listings, users, and requests for demonstration
-- Search, filters, status indicators, and CSV export
+- Recipient feedback after completed donations
+- Admin user listing and suspend/restore controls
 
-## Run locally
-
-1. Download or clone this repository.
-2. Open `sharebite_food_donation_prototype.html` in a modern web browser.
-3. Use one of the demo accounts below.
-
-## Demo accounts
-
-All demo accounts use password `demo123`.
-
-| Role | Email |
-| --- | --- |
-| Administrator | `admin@sharebite.demo` |
-| Food Donor | `donor@sharebite.demo` |
-| NGO | `ngo@sharebite.demo` |
-| Food Receiver | `receiver@sharebite.demo` |
-
-## Prototype limitations
-
-This is a static front-end demonstration. Authentication is simulated, registration does not create a real account, and data changes are not persisted to a database. Demo data is illustrative and is not real donation information. Do not use this prototype for real user accounts or production food-donation operations.
-
-## Technology
-
-- HTML
-- CSS
-- Vanilla JavaScript
+This is a coursework/local prototype, not production software. Do not expose it publicly. Sessions are in-memory and reset when the server restarts; database records persist. GPS is only captured after explicit permission. Demo entries are illustrative.
